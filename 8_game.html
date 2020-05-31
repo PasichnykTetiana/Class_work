@@ -23,30 +23,25 @@
         i,
         m=1,
         b=getRandomInt(11);
-    if (a>10){
-        console.log("Некорректное число");
-    }
     console.log(b);
+    if (a>10){
+        alert("Некорректное число");
+        a=parseInt(prompt("Еще раз (до 10)?", 0));
+    }
     do {
         if (a<b){
-            console.log("Загаданное число больше");
-            document.write("Загаданное число больше");
-            document.write("<br>");
+            alert("Загаданное число больше");
             m++;
             a=parseInt(prompt("Еще раз (до 10)?", 0));
         }
         if (a>b){
-            console.log("Загаданное число меньше");
-            document.write("Загаданное число меньше");
-            document.write("<br>");
+            alert("Загаданное число меньше");
             a=parseInt(prompt("Еще раз (до 10)?", 0));
             m++;
         }
         if (a===b){
             console.log("угадали");
-            document.write("Угадали");
-            document.write("<br>");
-            document.write("число ходов: ", m);
+            alert("Угадали! Число ходов: " + m);
             console.log("число ходов: ", m);
 
         }}
