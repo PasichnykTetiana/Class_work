@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    //Компьютер загадывает число. Когда пользователь вводит свою догадку, компьютер отвечает, было ли это число больше
+    // или меньше загаданного.
+    //Ваша задача угадать это число и постараться угадать загаданное число за наименьшее число ходов.
+    //Цель игры - развить логическое мышление и умение анализировать ситуацию.
+
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    let a=+prompt("Ваше число (до 10)?", 0),
+        i,
+        m=1,
+        b=getRandomInt(11);
+    if (a>10){
+        console.log("Некорректное число");
+    }
+    console.log(b);
+    do {
+        if (a<b){
+            console.log("Загаданное число больше");
+            document.write("Загаданное число больше");
+            document.write("<br>");
+            m++;
+            a=parseInt(prompt("Еще раз (до 10)?", 0));
+        }
+        if (a>b){
+            console.log("Загаданное число меньше");
+            document.write("Загаданное число меньше");
+            document.write("<br>");
+            a=parseInt(prompt("Еще раз (до 10)?", 0));
+            m++;
+        }
+        if (a===b){
+            console.log("угадали");
+            document.write("Угадали");
+            document.write("<br>");
+            document.write("число ходов: ", m);
+            console.log("число ходов: ", m);
+
+        }}
+        while (a!==b);
+
+
+
+
+</script>
+
+</body>
+</html>
