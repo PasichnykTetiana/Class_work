@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // Задача 6
+
+    // 6.1 Написать функцию в которую возможно передать любое количество чисел и эта функция возращает сумму этих всех чисел.
+    // 6.2 Все тоже самое но с умножением (помним по умножить на ноль), в таком случае программа ноль игнорирует и не
+    // превращает результат в 0
+
+    // f(2,3,0,4,0)
+    // 24
+    let a=[],
+        element,
+        i,
+        m=1;
+        sum=0;
+    do {
+
+        element=prompt("Добавить элемент", 0);
+        if (element!==null){
+            a.push(Number(element))
+        }
+    }
+    while (element!=null);
+
+    //!!!6.1!!!
+    // function f(num) {
+    // for (i=0; i<num.length; i++){
+    //     sum+=num[i];
+    // }
+    //     return sum
+    // }
+    // console.log(f(a));
+
+    //!!!6.2!!!
+    function f(num) {
+        for (i=0; i<num.length; i++){
+            if (num[i]!==0){
+                m*=num[i];
+            }
+        }
+        return m
+    }
+    console.log(f(a));
+</script>
+</body>
+</html>

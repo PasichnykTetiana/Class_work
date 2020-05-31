@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // Задача 4
+
+    // Есть массив и число в переменной 'N'
+    // Число 'N' это индекс элемента с которого нужно взять число, а потом взятое число умножить на 'N' раз
+    var arr = [];
+    var N =+prompt("число", 0),
+        element,
+        k;
+    do {
+        element=prompt("Добавить элемент", 0);
+        arr.push(element);
+    }
+    while (element!=null);
+
+    //
+    // k=Math.pow(arr[N], N);
+    // console.log(k);
+
+    function f(a) {
+        k=Math.pow(a[N], N);
+        return k;
+    }
+    console.log(f(arr));
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // Задача 3
+    //
+    // // есть массив в котором числа например
+    // const arr1 = [2,4,6,8,10];
+    // const arr2 = [2,4,6,8,9,10];
+    // // переменная ответа
+    // let result = false;
+    // let i;
+    // // прописать логику в котором идет проверка на наличие не четных чисел
+    //
+    // // console.log(false) в случае проверки arr1 (нет, ни одно нечетного числа в массиве)
+    // // console.log(true) в случае проверки arr2 (да, хотя бы одно число в массиве не четное)
+    const arr1 = [2,4,6,8,10];
+    const arr2 = [2,4,6,8,9,10];
+    let i;
+    function array(a) {
+        for (i=0; i<a.length; i++){
+            // console.log(a[i]);
+            if (a[i] % 2 !== 0){
+                return true;
+            }
+        }
+        return false
+
+    }
+    console.log(array(arr1));
+    console.log(array(arr2));
+
+
+
+
+</script>
+</body>
+</html>

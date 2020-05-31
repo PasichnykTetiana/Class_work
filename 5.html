@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // Задача 5
+
+    // Есть массив чисел например [-3, 5] или [2,9], нужно заполнить пропущенные значения между цифрами.
+    // Результат [-3,-2,-1,0,1,2,3,4,5], [2,3,4,5,6,7,8,9];
+
+    // 5.1 Пропишите вывод текста при случии если первое значение больше второго и код не работает
+
+    // 5.2 Убрав реализацию описания пункта выше (5.1) пропишите логику на оба варианта получения чисел, просто в случае
+    // [4, -1] результатом будет 4,3,2,1,0,-1 (можно прописать и на оборот -1,0,1,2,3,4)
+
+    //!!!5 и 5.1!!!
+    // let i,
+    //     element,
+    //     num,
+    //     b=[],
+    //     a=[];
+    // for (i=0; i<2; i++){
+    //     num=prompt("массив:");
+    //     a.push(Number(num));
+    // }
+    // if (a[0]<a[1]){
+    //     for (i=a[0]; i<a[1]+1; i++){
+    //         element=i;
+    //         b.push(element);
+    //     }
+    //    document.write(b)
+    // }
+    // else document.write("Некорректно");
+
+    //!!!5.1!!!
+    let i,
+        element,
+        num,
+        b=[],
+        a=[];
+    for (i=0; i<2; i++){
+        num=prompt("массив:");
+        a.push(Number(num));
+    }
+    if (a[0]<a[1]){
+        for (i=a[0]; i<a[1]+1; i++){
+            element=i;
+            b.push(element);
+        }
+       document.write(b)
+    }
+    else {
+        for (i=a[0]; i>a[1]-1; i--){
+            element=i;
+            b.push(element);
+        }
+        document.write(b)
+    }
+</script>
+</body>
+</html>
